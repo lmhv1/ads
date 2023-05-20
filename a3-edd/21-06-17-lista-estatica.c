@@ -43,14 +43,8 @@ void swap(int *x, int *y){
     return;
 }
 
-// 1. Crie uma função para imprimir todos os elementos da lista.
+// 1. Crie uma funï¿½ï¿½o para imprimir todos os elementos da lista.
 void q1(LISTA *lista){
-/*
-    for (int i=0; i<LIST_TAM; i++){
-        printf("index %d ocup %d elem %d ultimo %d", i, lista->ocupado[i], lista->item[i], lista->ultimo);
-        printf("\n");
-    }
-*/
 
     if (listaVazia(lista)){
         printf("A lista esta vazia.\n");
@@ -64,7 +58,7 @@ void q1(LISTA *lista){
     return;
 }
 
-// 2. Crie uma função para inserir um elemento em um posição k informada pelo usuário.
+// 2. Crie uma funï¿½ï¿½o para inserir um elemento em um posiï¿½ï¿½o k informada pelo usuï¿½rio.
 void q2(LISTA *lista){
     int k = -1;
     while(k < 1 || k > LIST_TAM){
@@ -84,7 +78,7 @@ void q2(LISTA *lista){
     return;
 }
 
-// 3. Crie uma função para inverter a lista.
+// 3. Crie uma funï¿½ï¿½o para inverter a lista.
 void q3(LISTA *lista){
     int meio = lista->ultimo/2;
     if ((lista->ultimo)%2==0) meio--;
@@ -96,7 +90,7 @@ void q3(LISTA *lista){
     return;
 }
 
-// 4. Crie uma função para ordenar a lista.
+// 4. Crie uma funï¿½ï¿½o para ordenar a lista.
 void q4(LISTA *lista){
     for (int i=0; i<lista->ultimo; i++){
         if (lista->item[i]>lista->item[i+1]){
@@ -151,8 +145,8 @@ int menu(){
     }
 }
 
-// 5. Crie um procedimento na main que permite o usuário ter acesso a todas as funcionalidades descritas até então.
-// Permita também que uma vez que o programa estiver funcionando, o usuário possa fazer quantas operações quiser.
+// 5. Crie um procedimento na main que permite o usuï¿½rio ter acesso a todas as funcionalidades descritas atï¿½ entï¿½o.
+// Permita tambï¿½m que uma vez que o programa estiver funcionando, o usuï¿½rio possa fazer quantas operaï¿½ï¿½es quiser.
 int main(){
     srand(time(NULL));
     LISTA lista;

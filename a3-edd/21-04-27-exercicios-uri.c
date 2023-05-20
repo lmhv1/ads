@@ -67,9 +67,8 @@ void aula1(){
             }while(segredo>1000);
             return segredo;
         }
-        printf('oi 2');
+
         genSeg();
-        printf('oi 3');
 
         do{
             printf("\nAche o valor do segredo (1-1000) ou digite 0 para sair: ");
@@ -273,7 +272,7 @@ void uri(){
         int i;
         long long m, n;
 
-        printf("\nDigite os valores\n"); // comentar esta linha p/ enviar como solução do desafio
+        printf("\nDigite os valores\n"); // comentar esta linha p/ enviar como soluï¿½ï¿½o do desafio
 
         while(scanf("%llu %llu",&m, &n)!=EOF){ // loop infinito conforme solicitado no desafio do URI
             if (m>0){
@@ -324,7 +323,7 @@ void uri(){
         printf("Insira os 2 valores: ");
 
         //URI inicio
-        int in1, in2, sum=0, carry=0, sB=0; // sB = adiciona 1 na proxima operação
+        int in1, in2, sum=0, carry=0, sB=0; // sB = adiciona 1 na proxima operaï¿½ï¿½o
 
         while(1){
             fflush(stdin);
@@ -332,26 +331,21 @@ void uri(){
             if (in1==0 && in2==0) break;
 
             while (1){
-                //printf("\n-1- in1 %d, in2 %d, sum %d, carry %d, sB %d\n", in1, in2, sum, carry, sB);
                 if (in1==0 && in2==0) break;
 
                 sum = (in1%10) + (in2%10);
-                //printf("-2- in1 %d, in2 %d, sum %d, carry %d, sB %d\n", in1, in2, sum, carry, sB);
 
                 if (sB){
                     sum++;
                     sB--;
-                    //printf("-3- in1 %d, in2 %d, sum %d, carry %d, sB %d\n", in1, in2, sum, carry, sB);
                 }
                 if (sum>=10){
                     sB++;
                     carry++;
-                    //printf("-4- in1 %d, in2 %d, sum %d, carry %d, sB %d\n", in1, in2, sum, carry, sB);
                 }
 
                 in1/=10;
                 in2/=10;
-                //printf("-5- in1 %d, in2 %d, sum %d, carry %d, sB %d\n", in1, in2, sum, carry, sB);
             }
             if (carry==0) printf("No carry operation.\n");
             else if (carry==1) printf("1 carry operation.\n");

@@ -90,7 +90,7 @@ int inserir(NO **raizPtr, int elem){
 //        anterior->esq = criarNo(elem);
 //    return 1;
 
-    // Implementação recursiva:
+    // Implementaï¿½ï¿½o recursiva:
     if (elem < raiz->info)
         return inserir(&(raiz->esq), elem);
     else
@@ -172,7 +172,7 @@ int remover(NO **raiz, int elem){
                     anterior->dir = aux->esq;
                 free(aux);
             }else{ // caso 3 - possui duas sub arvores
-                NO *maiorEsq = maiorElemento(&(aux->esq)); // maior no é determinado
+                NO *maiorEsq = maiorElemento(&(aux->esq)); // maior no ï¿½ determinado
 
                 maiorEsq->esq = aux->esq;
                 maiorEsq->dir = aux->dir;
