@@ -4,7 +4,7 @@
 ---
 
 1. (2,0) Desenvolva um site em HTML e CSS que contemple os critérios seguintes e corresponda ao wireframe abaixo:
-    ![wireframe](/img/wireframe.png)
+    ![wireframe](img/wireframe.png)
     - Utilizar formatação de:
         - fontes
         - textos
