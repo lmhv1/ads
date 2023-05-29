@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <style>
+        body {background-color: grey;}
+        .carrossel {
+            width: 40%;
+            margin: 0 auto;
+        }
+        img {
+            margin: 0 auto;
+            height: 300px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="carrossel">
+        <div><img src="https://cataas.com/cat?height=201"></div>
+        <div><img src="https://cataas.com/cat?height=202"></div>
+        <div><img src="https://cataas.com/cat?height=203"></div>
+        <div><img src="https://cataas.com/cat?height=204"></div>
+        <div><img src="https://cataas.com/cat?height=205"></div>
+        <div><img src="https://cataas.com/cat?height=206"></div>
+        <div><img src="https://cataas.com/cat?height=207"></div>
+        <div><img src="https://cataas.com/cat?height=208"></div>
+        <div><img src="https://cataas.com/cat?height=209"></div>
+        <div><img src="https://cataas.com/cat?height=210"></div>
+        <div><img src="https://cataas.com/cat?height=211"></div>
+        <div><img src="https://cataas.com/cat?height=212"></div>
+        <div><img src="https://cataas.com/cat?height=213"></div>
+        <div><img src="https://cataas.com/cat?height=214"></div>
+        <div><img src="https://cataas.com/cat?height=215"></div>
+        <div><img src="https://cataas.com/cat?height=216"></div>
+        <div><img src="https://cataas.com/cat?height=217"></div>
+        <div><img src="https://cataas.com/cat?height=218"></div>
+        <div><img src="https://cataas.com/cat?height=219"></div>
+        <div><img src="https://cataas.com/cat?height=220"></div>
+    </div>
+    
+    <form>
+        <p>
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf">
+        </p>
+        <p>
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" name="cnpj" id="cnpj">
+        </p>
+        <p>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone">
+        </p>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // carousel
+        $('.carrossel').slick({
+            dots: true,
+            Infinity: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+        });
+    </script>
+    <script>
+        // mask
+        $(document).ready(function(){
+            $('#cpf').mask('000.000.000-00');
+            $('#cnpj').mask('00.000.000/0000-00');
+            $('#telefone').mask('(00) 00000-0000');
+        });
+    </script>
+</body>
+</html>

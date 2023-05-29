@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confira as diferentes formas de utilizar CSS em seu site | TechTubo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="banner">
+        <h1><a href="pag1.html"><span class="tech-color-banner">tech</span><span class="tubo-color">tubo</span></a></h1>
+    </div><br>
+    <header>
+        <h1 class="title">Confira as diferentes formas de utilizar CSS em seu site</h1>
+        <br><br>
+        <h3 class="author">Por Lucas, para o TechTubo</h3>
+        <h4 class="date">14/03/2023 16h11</h4>
+        <br><hr><br>
+    </header>
+
+    <div class="page justify">
+        <p>CSS (Cascading Style Sheets) é uma linguagem de marcação que permite a estilização de páginas da web. Com esse recurso, é possível customizar as cores, fontes, entre outros elementos de um site. A implementação do CSS é possível através de diferentes formas, como inline, internamente ou externamente.</p>
+        <br><h2>Externo</h2>
+        <p>O uso do CSS externo permite a aplicação de estilos em diferentes páginas utilizando um só arquivo CSS. Ao editar o arquivo, as mudanças são refletidas em todas as páginas vinculadas.</p>
+        <img src="imagens/css-external.png" alt="css externo">
+        <p>Para vincular uma página a um arquivo CSS, basta utilizar o elemento "&lt;link&gt;" na seção &lt;head&gt; do documento HTML, indicar a relação como "stylesheet" e referenciar o caminho até o arquivo, como mostra a imagem abaixo:</p>
+        <img src="imagens/css-external-link.png" alt="link para css externo">
+        <br><h2>Interno</h2>
+        <p>Estilos internos são úteis quando há a necessidade de substituir alguma regra específica de um estilo externo, estes devem ser definidos dentro da tag "&lt;style&gt;" na seção &lt;head&gt; de um documento HTML.</p>
+        <img src="imagens/css-internal.png" alt="css interno">
+        <br><h2>Inline</h2>
+        <p>CSS Inline é o método de implementação onde o atributo 'style' é aplicado diretamente em um elemento HTML. Pode ser utilizado para aplicar estilos em um elemento que é utilizado uma única vez em uma página, no entanto, os estilos inline podem tornar o código HTML mais difícil de ler e manter, então geralmente é melhor usá-los com moderação. O CSS Inline tem maior prioridade comparado aos outros métodos, e sobrepõe outros estilos caso haja conflito.</p>
+        <img src="imagens/css-inline.png" alt="css inline">
+    </div>
+
+    <br>
+    <footer>
+        <h1><a href="pag1.html"><span class="tech-color-footer">tech</span><span class="tubo-color">tubo</span></a></h1>
+        <hr>
+        <a href="pag1.html">Página Inicial</a><br>
+        <a href="pag4.html">Contato</a><br>
+    </footer>
+</body>
+</html>

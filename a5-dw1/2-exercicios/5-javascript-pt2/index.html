@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 05 | Javascript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {transition: all 200ms;}
+        html {
+            background-color: lightblue;
+            font-family: 'Roboto', sans-serif;
+        }
+        fieldset {
+            margin: 50px 20%;
+            border: 1px solid blue;
+        }
+        input {margin: 5px 5px;}
+        table {border-collapse: collapse;}
+        th, td {
+            border: 1px solid black;
+            padding: 2px 10px;
+            text-align: center;
+        }
+        footer {height: 300px;}
+    </style>
+</head>
+<body>
+     <fieldset>
+        <legend>Exercício 1</legend>
+        <p>
+            Escreva um programa em JavaScript que leia um número e calcule a soma de todos eles de 1 até ele.<br>
+            Ex. se o usuário entrar com 6, o programa vai mostrar 21, pois 1 + 2 + 3 + 4 + 5 + 6 = 21.
+        </p>
+        <form>
+            <input type="number" name="ex1_in_1" id="ex1_in_1" placeholder="Valor">
+            <button type="button" onclick="ex1()">Calcular</button>
+        </form>
+        <p id="ex1_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex1 -->
+
+     <fieldset>
+        <legend>Exercício 2</legend>
+        <p>
+            Escreva um programa em JavaScript que leia dois valores A e B.<br>
+            Se A for igual B, devem ser lidos novos valores para A e B.<br>
+            Se A for menor que B, deve-se calcular e imprimir a subtração de B – A.<br>
+            Se A for maior que B, deve-se calcular e imprimir a subtração de A – B.<br>
+            Obs.: Considere que só serão informados valores inteiros positivos.
+        </p>
+        <form>
+            <input type="number" name="ex2_in_1" id="ex2_in_1" placeholder="Valor A">
+            <input type="number" name="ex2_in_2" id="ex2_in_2" placeholder="Valor B">
+            <button type="button" onclick="ex2()">Calcular</button>
+        </form>
+        <p id="ex2_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex2 -->
+
+     <fieldset>
+        <legend>Exercício 3</legend>
+        <p>Escreva um programa em JavaScript que apresente a soma dos 100 primeiros números pares.</p>
+        <form>
+            <button type="button" onclick="ex3()">Calcular</button>
+        </form>
+        <p id="ex3_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex3 -->
+     
+     <fieldset>
+        <legend>Exercício 4</legend>
+        <p>Escreva um programa em JavaScript que calcule a fatorial de um número qualquer.</p>
+        <form>
+            <input type="number" name="ex4_in_1" id="ex4_in_1" placeholder="Valor">
+            <button type="button" onclick="ex4()">Calcular</button>
+        </form>
+        <p id="ex4_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex4 -->
+
+     <fieldset>
+        <legend>Exercício 5</legend>
+        <p>Escreva um programa em JavaScript que coloque na tela a tabuada de multiplicação para um número qualquer.</p>
+        <form>
+            <input type="number" name="ex5_in_1" id="ex5_in_1" placeholder="Valor">
+            <button type="button" onclick="ex5()">Calcular</button>
+        </form>
+        <p id="ex5_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex5 -->
+
+     <fieldset>
+        <legend>Exercício 6</legend>
+        <p>Escreva um programa em JavaScript que leia um determinado número e verifique se ele é primo ou não.</p>
+        <form>
+            <input type="number" name="ex6_in_1" id="ex6_in_1" placeholder="Valor">
+            <button type="button" onclick="ex6()">Verificar</button>
+        </form>
+        <p id="ex6_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex6 -->
+
+     <fieldset>
+        <legend>Exercício 7</legend>
+        <p>Escreva um programa em JavaScript que mostre os 100 primeiros números primos.</p>
+        <form>
+            <button type="button" onclick="ex7()">Exibir</button>
+        </form>
+        <p id="ex7_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex7 -->
+
+     <fieldset>
+        <legend>Exercício 8</legend>
+        <p>Escreva um programa em JavaScript para mostrar na tela os números de 20 a 1 em contagem regressiva.</p>
+        <form>
+            <button type="button" onclick="ex8()">Exibir</button>
+        </form>
+        <p id="ex8_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex8 -->
+
+     <fieldset>
+        <legend>Exercício 9</legend>
+        <p>Escreva um programa em JavaScript que imprima somente os números ímpares no intervalo de 0 a 200.</p>
+        <form>
+            <button type="button" onclick="ex9()">Exibir</button>
+        </form>
+        <p id="ex9_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex9 -->
+
+     <footer></footer>
+
+     <script>
+        function ex1(){
+            // Escreva um programa em JavaScript que leia um número e calcule a soma de todos eles de 1 até ele.
+            // Ex. se o usuário entrar com 6, o programa vai mostrar 21, pois 1 + 2 + 3 + 4 + 5 + 6 = 21.
+            let valor = Number(document.getElementById("ex1_in_1").value);
+            let soma = 0;
+
+            for (let i = 1; i <= valor; i++) {
+                soma += i;
+            }
+
+            document.getElementById("ex1_out_1").innerHTML = `Soma: ${soma}`;
+            document.getElementById("ex1_out_1").style.display = "block";
+            return;
+        }
+        function ex2(){
+            // Escreva um programa em JavaScript que leia dois valores A e B.
+            // Se A for igual B, devem ser lidos novos valores para A e B.
+            // Se A for menor que B, deve-se calcular e imprimir a subtração de B – A.
+            // Se A for maior que B, deve-se calcular e imprimir a subtração de A – B.
+            // Obs.: Considere que só serão informados valores inteiros positivos.
+            let valorA = Number(document.getElementById("ex2_in_1").value);
+            let valorB = Number(document.getElementById("ex2_in_2").value);
+            let resultado = ``;
+
+            if (valorA == valorB) {
+                resultado = `Por favor, insira valores diferentes`;
+            } else if (valorA < valorB) {
+                resultado = `Resultado: ${valorB - valorA}`;
+            } else if (valorA > valorB) {
+                resultado = `Resultado: ${valorA - valorB}`;
+            }
+
+            document.getElementById("ex2_out_1").innerHTML = resultado;
+            document.getElementById("ex2_out_1").style.display = "block";
+            return;
+        }
+        function ex3(){
+            // Escreva um programa em JavaScript que apresente a soma dos 100 primeiros números pares.
+            let iterador = 0;
+            let contadorPares = 0;
+            let soma = 0;
+            let resultado = `Pares (com zero):<br><br>`;
+            // loop até o centésimo numero par
+            while (contadorPares < 100) {
+                // condicional verifica se é par
+                if (iterador % 2 == 0) {
+                    // adiciona numero par à soma e incrementa o contador do numero de pares
+                    soma += iterador;
+                    resultado += `${iterador} `
+                    contadorPares++;
+                }
+                iterador++;
+            }
+            resultado += `<br><br><b>Soma: ${soma}</b>`
+
+            // sem zero
+            resultado += `<br><br><hr><br>Pares (sem zero):<br><br>`;
+            iterador = 1;
+            contadorPares = 0;
+            soma = 0;
+            while (contadorPares < 100) {
+                if (iterador % 2 == 0) {
+                    soma += iterador;
+                    resultado += `${iterador} `
+                    contadorPares++;
+                }
+                iterador++;
+            }
+            resultado += `<br><br><b>Soma: ${soma}</b>`
+
+            document.getElementById("ex3_out_1").innerHTML = resultado;
+            document.getElementById("ex3_out_1").style.display = "block";
+            return;
+        }
+        function ex4(){
+            // Escreva um programa em JavaScript que calcule a fatorial de um número qualquer.
+            let numero = Number(document.getElementById("ex4_in_1").value);
+            let resultado = 1;
+
+            if (numero > 1) {
+                for (let i = numero; i >= 2; i--) {
+                    resultado *= i;
+                }
+            }
+            
+            document.getElementById("ex4_out_1").innerHTML = `Resultado: ${resultado}`;
+            document.getElementById("ex4_out_1").style.display = "block";
+            return;
+        }
+        function ex5(){
+            // Escreva um programa em JavaScript que coloque na tela a tabuada de multiplicação para um número qualquer.
+            let valor = Number(document.getElementById("ex5_in_1").value);
+            let resultado = ``;
+
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${valor} x ${i} = ${valor * i}<br>`;
+            }
+
+            document.getElementById("ex5_out_1").innerHTML = `Tabuada do número ${valor}<br>${resultado}`;
+            document.getElementById("ex5_out_1").style.display = "block";
+            return;
+        }
+        function ex6(){
+            // Escreva um programa em JavaScript que leia um determinado número e verifique se ele é primo ou não.
+            let valor = Number(document.getElementById("ex6_in_1").value);
+            let contadorDivisores = 0;
+
+            // primo == divisível por 1 e ele mesmo
+            // logo, em um loop de 1 até ele mesmo, o numero deve possuir apenas 2 divisores
+            for (let i = 1; i <= valor; i++) {
+                if (valor % i == 0) {
+                    contadorDivisores++;
+                }
+            }
+
+            if (contadorDivisores == 2) {
+                resultado = `é`;
+            } else {
+                resultado = `não é`
+            }
+
+            document.getElementById("ex6_out_1").innerHTML = `${valor} ${resultado} um número primo`;
+            document.getElementById("ex6_out_1").style.display = "block";
+            return;
+        }
+        function ex7(){
+            // Escreva um programa em JavaScript que mostre os 100 primeiros números primos.
+            let iterador = 0;
+            let contadorPrimos = 0;
+            let resultado = ``;
+
+            // loop até o centésimo numero primo
+            while (contadorPrimos < 100) {
+                // verificaçao (primo?)
+                let contadorDivisores = 0;
+                for (let i = 1; i <= iterador; i++) {
+                    if (iterador % i == 0) {
+                        contadorDivisores++;
+                    }
+                }
+                if (contadorDivisores == 2) {
+                    resultado += `${iterador} `;
+                    contadorPrimos++;
+                }
+                // fim verificação (primo?)
+                // avança para o proximo numero
+                iterador++;
+            }
+
+            document.getElementById("ex7_out_1").innerHTML = `100 Primeiros números primos:<br>${resultado}`;
+            document.getElementById("ex7_out_1").style.display = "block";
+            return;
+        }
+        function ex8(){
+            // Escreva um programa em JavaScript para mostrar na tela os números de 20 a 1 em contagem regressiva.
+            let resultado = ``;
+
+            for (let i = 20; i > 0; i--) {
+                resultado += `${i}<br>`
+
+            }
+
+            document.getElementById("ex8_out_1").innerHTML = `${resultado}`;
+            document.getElementById("ex8_out_1").style.display = "block";
+            return;
+        }
+        function ex9(){
+            // Escreva um programa em JavaScript que imprima somente os números ímpares no intervalo de 0 a 200.
+            let resultado = ``;
+            for (let i = 0; i <= 200; i++) {
+                if (i % 2 == 1) {
+                    resultado += `${i} `
+                }
+            }
+            document.getElementById("ex9_out_1").innerHTML = `Números ímpares de 0 a 200:<br>${resultado}`;
+            document.getElementById("ex9_out_1").style.display = "block";
+            return;
+        }
+     </script>
+</body>
+</html>

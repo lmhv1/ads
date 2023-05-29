@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04 | Javascript</title>
+    <style>
+        * {transition: all 200ms;}
+        html {
+            background-color: lightblue;
+        }
+        fieldset {
+            margin: 50px 20%;
+            border: 1px solid blue;
+        }
+        input {margin: 5px 5px;}
+        table {border-collapse: collapse;}
+        th, td {
+            border: 1px solid black;
+            padding: 2px 10px;
+            text-align: center;
+        }
+        footer {height: 300px;}
+    </style>
+</head>
+<body>
+     <fieldset>
+        <legend>Exercício 1</legend>
+        <p>Escreva um programa em JavaScript que leia uma quantidade de horas, minutos e segundos e imprima o total de segundos.</p>
+        <form>
+            <input type="number" name="ex1_in_1" id="ex1_in_1" placeholder="horas">
+            <input type="number" name="ex1_in_2" id="ex1_in_2" placeholder="minutos">
+            <input type="number" name="ex1_in_3" id="ex1_in_3" placeholder="segundos">
+            <button type="button" onclick="ex1()">Calcular</button>
+        </form>
+        <p id="ex1_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex1 -->
+
+     <fieldset>
+        <legend>Exercício 2</legend>
+        <p>
+            Escreva um programa em JavaScript que leia quatro notas de um aluno, calcule a soma e média das notas.<br>
+            Mostre se o aluno foi Aprovado ou Reprovado.<br>
+            Para ser aprovado a média deverá ser maior ou igual a 6.
+        </p>
+        <form>
+            <input type="number" name="ex2_in_1" id="ex2_in_1" placeholder="nota 1">
+            <input type="number" name="ex2_in_2" id="ex2_in_2" placeholder="nota 2">
+            <input type="number" name="ex2_in_3" id="ex2_in_3" placeholder="nota 3">
+            <input type="number" name="ex2_in_4" id="ex2_in_4" placeholder="nota 4">
+            <button type="button" onclick="ex2()">Calcular</button>
+        </form>
+        <p id="ex2_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex2 -->
+
+     <fieldset>
+        <legend>Exercício 3</legend>
+        <p>Dado o valor de um depósito e o valor da taxa de juros, escreva um programa em JavaScript para
+            calcular e imprimir o valor do rendimento e o valor total depois do rendimento.</p>
+        <form>
+            <input type="number" name="ex3_in_1" id="ex3_in_1" placeholder="Valor">
+            <input type="number" name="ex3_in_2" id="ex3_in_2" placeholder="Juros (%)">
+            <button type="button" onclick="ex3()">Calcular</button>
+        </form>
+        <p id="ex3_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex3 -->
+     
+     <fieldset>
+        <legend>Exercício 4</legend>
+        <p>Escreva um programa em JavaScript que leia um número digitado pelo usuário e determine se esse número é par ou ímpar.</p>
+        <form>
+            <input type="number" name="ex4_in_1" id="ex4_in_1" placeholder="Número">
+            <button type="button" onclick="ex4()">Verificar</button>
+        </form>
+        <p id="ex4_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex4 -->
+
+     <fieldset>
+        <legend>Exercício 5</legend>
+        <p>
+            Escreva um programa em JavaScript que receba um símbolo de operação do usuário (+, -, / ou *) e dois números reais.<br>
+            O programa deve retornar o resultado da operação recebida sobre estes dois números.
+        </p>
+        <form>
+            <input type="text" name="ex5_in_1" id="ex5_in_1" placeholder="Operação (+, -, / ou *)">
+            <input type="number" name="ex5_in_2" id="ex5_in_2" placeholder="Primeiro número">
+            <input type="number" name="ex5_in_3" id="ex5_in_3" placeholder="Segundo número">
+            <button type="button" onclick="ex5()">Calcular</button>
+        </form>
+        <p id="ex5_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex5 -->
+
+     <fieldset>
+        <legend>Exercício 6</legend>
+        <p>Escreva um programa em JavaScript que receba 3 valores não inteiros do usuário e mostre o maior, o menor e a média.</p>
+        <form>
+            <input type="number" name="ex6_in_1" id="ex6_in_1" placeholder="Valor 1">
+            <input type="number" name="ex6_in_2" id="ex6_in_2" placeholder="Valor 2">
+            <input type="number" name="ex6_in_3" id="ex6_in_3" placeholder="Valor 3">
+            <button type="button" onclick="ex6()">Calcular</button>
+        </form>
+        <p id="ex6_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex6 -->
+
+     <fieldset>
+        <legend>Exercício 7</legend>
+        <p>Para um salário informado pelo usuário, calcular o desconto do INSS de acordo com a tabela a seguir:</p>
+        <table><tr><th>SALÁRIO (R$)</th><th>% DESCONTO INSS</th></tr><tr><td>Até 420,00</td><td>8%</td></tr><tr><td>Acima de 420,00 até 1.350,00</td><td>9%</td></tr><tr><td>Acima de 1.350,00</td><td>10%</td></tr></table>
+        <form>
+            <input type="number" name="ex7_in_1" id="ex7_in_1" placeholder="Salário">
+            <button type="button" onclick="ex7()">Calcular</button>
+        </form>
+        <p id="ex7_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex7 -->
+
+     <fieldset>
+        <legend>Exercício 8</legend>
+        <p>Escreva um programa em JavaScript que receba uma letra digitada pelo usuário e determine se é uma vogal ou consoante.</p>
+        <form>
+            <input type="text" name="ex8_in_1" id="ex8_in_1" placeholder="Letra">
+            <button type="button" onclick="ex8()">Verificar</button>
+        </form>
+        <p id="ex8_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex8 -->
+
+     <fieldset>
+        <legend>Exercício 9</legend>
+        <p>
+            Escreva um programa em JavaScript para calcular qual a melhor opção para o motorista abastecer com Etanol ou com Gasolina.<br>
+            Considere que não vale a pena abastecer o veículo com etanol quando o preço exceder 70% da gasolina.<br>
+            Dica: Faça a divisão entre o preço do etanol com o da gasolina.
+        </p>
+        <form>
+            <input type="number" name="ex9_in_1" id="ex9_in_1" placeholder="Valor do etanol">
+            <input type="number" name="ex9_in_2" id="ex9_in_2" placeholder="Valor da gasolina">
+            <button type="button" onclick="ex9()">Calcular</button>
+        </form>
+        <p id="ex9_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex9 -->
+
+     <fieldset>
+        <legend>Exercício 10</legend>
+        <p>
+            Escreva um programa em  JavaScript  para verificar se um determinado ano é bissexto ou não.<br>
+            Obs.: um ano é bissexto se ele for divisível por 400 ou se ele for divisível por 4 e não por 100.
+        </p>
+        <form>
+            <input type="number" name="ex10_in_1" id="ex10_in_1" placeholder="Ano">
+            <button type="button" onclick="ex10()">Verificar</button>
+        </form>
+        <p id="ex10_out_1" style="display: none;"></p>
+     </fieldset> <!-- ex10 -->
+
+     <footer></footer>
+
+     <script>
+        function ex1(){
+            // Escreva um programa em JavaScript que leia uma quantidade de horas, minutos e segundos e imprima o total de segundos.
+            var horas = Number(document.getElementById("ex1_in_1").value);
+            var minutos = Number(document.getElementById("ex1_in_2").value);
+            var segundos = Number(document.getElementById("ex1_in_3").value);
+
+            var total = horas * 3600 + minutos * 60 + segundos;
+
+            document.getElementById("ex1_out_1").innerHTML = `Total: ${total} segundos`;
+            document.getElementById("ex1_out_1").style.display = "block";
+            return;
+        }
+        function ex2(){
+            // Escreva um programa em JavaScript que leia quatro notas de um aluno, calcule a soma e média das notas.
+            // Mostre se o aluno foi Aprovado ou Reprovado.
+            // Para ser aprovado a média deverá ser maior ou igual a 6.
+            var nota1 = Number(document.getElementById("ex2_in_1").value);
+            var nota2 = Number(document.getElementById("ex2_in_2").value);
+            var nota3 = Number(document.getElementById("ex2_in_3").value);
+            var nota4 = Number(document.getElementById("ex2_in_4").value);
+            
+            var notaTotal = nota1 + nota2 + nota3 + nota4;
+            var notaMedia = notaTotal / 4;
+            var aprovado = "";
+
+            (notaMedia >= 6) ? aprovado = "SIM" : aprovado = "NÃO"
+
+            document.getElementById("ex2_out_1").innerHTML = `Soma: ${notaTotal} | Média: ${notaMedia} | Aprovado: ${aprovado}`;
+            document.getElementById("ex2_out_1").style.display = "block";
+            return;
+        }
+        function ex3(){
+            // Dado o valor de um depósito e o valor da taxa de juros, escreva um programa em JavaScript para
+            // calcular e imprimir o valor do rendimento e o valor total depois do rendimento.
+            var valor = Number(document.getElementById("ex3_in_1").value);
+            var juros = Number(document.getElementById("ex3_in_2").value) / 100;
+
+            var rendimento = valor * juros;
+
+            document.getElementById("ex3_out_1").innerHTML = `Valor do rendimento: ${rendimento} | Total: ${valor + rendimento}`;
+            document.getElementById("ex3_out_1").style.display = "block";
+            return;
+        }
+        function ex4(){
+            // Escreva um programa em JavaScript que leia um número digitado pelo usuário e determine se esse número é par ou ímpar.
+            var numero = Number(document.getElementById("ex4_in_1").value);
+
+            var resultado = "";
+            (numero % 2 == 0) ? resultado = "par" : resultado = "ímpar";
+
+            document.getElementById("ex4_out_1").innerHTML = `${numero} é ${resultado}`;
+            document.getElementById("ex4_out_1").style.display = "block";
+            return;
+        }
+        function ex5(){
+            // Escreva um programa em JavaScript que receba um símbolo de operação do usuário (+, -, / ou *) e dois números reais.
+            // O programa deve retornar o resultado da operação recebida sobre estes dois números.
+            var operacao = document.getElementById("ex5_in_1").value;
+            var valor1 = Number(document.getElementById("ex5_in_2").value);
+            var valor2 = Number(document.getElementById("ex5_in_3").value);
+
+            switch (operacao) {
+                case "+":
+                    document.getElementById("ex5_out_1").innerHTML = `Resultado: ${valor1 + valor2}`;
+                    break;
+                case "-":
+                    document.getElementById("ex5_out_1").innerHTML = `Resultado: ${valor1 - valor2}`;
+                    break;
+                case "/":
+                    document.getElementById("ex5_out_1").innerHTML = `Resultado: ${valor1 / valor2}`;
+                    break;
+                case "*":
+                    document.getElementById("ex5_out_1").innerHTML = `Resultado: ${valor1 * valor2}`;
+                    break;
+                default:
+                    document.getElementById("ex5_out_1").innerHTML = `ERRO: Operação inválida`;
+            }
+            
+            document.getElementById("ex5_out_1").style.display = "block";
+            return;
+        }
+        function ex6(){
+            // Escreva um programa em JavaScript que receba 3 valores não inteiros do usuário e mostre o maior, o menor e a média.
+            var valor1 = Number(document.getElementById("ex6_in_1").value);
+            var valor2 = Number(document.getElementById("ex6_in_2").value);
+            var valor3 = Number(document.getElementById("ex6_in_3").value);
+            
+            var maior = valor1;
+            if (valor2 > maior) {maior = valor2;}
+            if (valor3 > maior) {maior = valor3;}
+
+            var menor = valor1;
+            if (valor2 < menor) {menor = valor2;}
+            if (valor3 < menor) {menor = valor3;}
+
+            var media = (valor1 + valor2 + valor3) / 3;
+
+            document.getElementById("ex6_out_1").innerHTML = `Maior valor: ${maior} | Menor valor: ${menor} | Média: ${media}`;
+            document.getElementById("ex6_out_1").style.display = "block";
+            return;
+        }
+        function ex7(){
+            // Para um salário informado pelo usuário, calcular o desconto do INSS de acordo com a tabela a seguir:
+            // <420.00: 8%
+            // 420.00-1350.00: 9%
+            // >1350.00: 10%
+            var salario = Number(document.getElementById("ex7_in_1").value);
+            var descontoPct = 0;
+
+            if (salario < 420) {descontoPct = 8;}
+            else if (salario >= 420 && salario <= 1350) {descontoPct = 9;}
+            else if (salario > 1350) {descontoPct = 10;}
+
+            var desconto = salario * (descontoPct/100);
+            
+            document.getElementById("ex7_out_1").innerHTML = `Valor do desconto: ${desconto} (${descontoPct}%)`;
+            document.getElementById("ex7_out_1").style.display = "block";
+            return;
+        }
+        function ex8(){
+            // Escreva um programa em JavaScript que receba uma letra digitada pelo usuário e determine se é uma vogal ou consoante.
+            var letra = document.getElementById("ex8_in_1").value.toLowerCase();
+            
+            // verificação
+            if (letra.length > 1) {
+                document.getElementById("ex8_out_1").innerHTML = `ERRO: Digite apenas um caractere!`;
+                document.getElementById("ex8_out_1").style.display = "block";
+                return;
+            }
+
+            var resultado = "consoante";
+            if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+                resultado = "vogal";
+            }
+            else if (letra < "a" || letra > "z") {
+                document.getElementById("ex8_out_1").innerHTML = `ERRO: O caractere digitado não é uma letra!`;
+                document.getElementById("ex8_out_1").style.display = "block";
+                return;
+            }
+
+            document.getElementById("ex8_out_1").innerHTML = `A letra digitada é uma ${resultado}`;
+            document.getElementById("ex8_out_1").style.display = "block";
+            return;
+        }
+        function ex9(){
+            // Escreva um programa em JavaScript para calcular qual a melhor opção para o motorista abastecer com Etanol ou com Gasolina.
+            // Considere que não vale a pena abastecer o veículo com etanol quando o preço exceder 70% da gasolina.
+            // Dica: Faça a divisão entre o preço do etanol com o da gasolina.
+            var valorEtanol = Number(document.getElementById("ex9_in_1").value);
+            var valorGasolina = Number(document.getElementById("ex9_in_2").value);
+            var ganhador = "";
+
+            (valorEtanol / valorGasolina < 0.7) ? ganhador = "etanol" : ganhador = "gasolina";
+            
+            document.getElementById("ex9_out_1").innerHTML = `Vale mais a pena abastecer com ${ganhador}`;
+            document.getElementById("ex9_out_1").style.display = "block";
+            return;
+        }
+        function ex10(){
+            // Escreva um programa em  JavaScript  para verificar se um determinado ano é bissexto ou não.
+            // Obs.: um ano é bissexto se ele for divisível por 400 ou se ele for divisível por 4 e não por 100.
+            var ano = Number(document.getElementById("ex10_in_1").value);
+
+            if (ano % 400 == 0 || (ano % 4 == 0 && ano % 100 != 0)) {
+                document.getElementById("ex10_out_1").innerHTML = `O ano é bissexto`;
+            }
+            else {
+                document.getElementById("ex10_out_1").innerHTML = `O ano <b>não</b> é bissexto`;
+            }
+
+            document.getElementById("ex10_out_1").style.display = "block";
+            return;
+        }
+     </script>
+</body>
+</html>

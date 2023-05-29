@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos | Mouse</title>
+    <style>
+        * {
+            transition: all 200ms;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .format {
+            width: 100px;
+            height: 100px;
+            margin: 4px;
+        }
+        .clr-mouse {background-color: lightsalmon;}
+        .clr-key {background-color: lightblue;}
+        .clr-form {background-color: lightgray;}
+        .clr-cor {background-color: lightgreen;}
+        .clr-changeText {background-color: lightslategrey;}
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="format clr-mouse" onclick="alert('click');"><p>click</p></div>
+        <div class="format clr-mouse" ondblclick="alert('dbl click');"><p>dbl click</p></div>
+        <div class="format clr-mouse" onmousedown="alert('mouse down');"><p>mouse down</p></div>
+        <div class="format clr-mouse" onmouseup="alert('mouse up');"><p>mouse up</p></div>
+        <div class="format clr-mouse" onmouseover="alert('mouse over');"><p>mouse over</p></div>
+        <div class="format clr-mouse" onmousemove="alert('mouse move');"><p>mouse move</p></div>
+    </div>
+    <div class="flex-container">
+        <input type="text" id="kp" class="format clr-key" onkeypress="alert('key press');" placeholder="key press">
+        <input type="text" id="kd" class="format clr-key" onkeydown="alert('key down');" placeholder="key down">
+        <input type="text" id="ku" class="format clr-key" onkeyup="alert('key up');" placeholder="key up">
+    </div>
+    <div class="flex-container">
+        <input type="text" id="blur" class="format clr-form" onblur="alert('blur');" placeholder="blur">
+        <select id="opcao" class="format clr-form" onchange="alert('option change')">
+            <option value="opcao1">opção 1</option>
+            <option value="opcao3">opção 2</option>
+            <option value="opcao2">opção 3</option>
+        </select>
+    </div>
+    <div class="flex-container">
+        <input type="color" id="cor" class="format clr-cor">
+        <button type="button" id="btnCor" class="format clr-cor">Alterar cor</button>
+        <button type="button" id="btnCorAuto" class="format clr-cor">Cor automatica</button>
+    </div>
+    <div class="flex-container">
+        <div class="format clr-changeText" id="divChangeText">Texto Inicial</div>
+        <input type="text" id="txtChangeText" class="format clr-changeText" placeholder="Novo texto">
+        <button type="button" id="btnChangeText" class="format clr-changeText">Alterar texto</button>
+    </div>
+    <script>
+        function cor(){
+            let cor = document.getElementById("cor");
+            let btnCor = document.getElementById("btnCor");
+            let btnCorAuto = document.getElementById("btnCorAuto");
+
+            btnCor.addEventListener("click", function(){
+                let cor = document.getElementById("cor").value;
+                btnCor.style.color = cor;
+                btnCor.style.borderColor = cor;
+            })
+
+            cor.addEventListener("change", function(){
+                let cor = document.getElementById("cor").value;
+                btnCorAuto.style.color = cor;
+                btnCorAuto.style.borderColor = cor;
+            })
+        }
+        function changeText(){
+            let btnChangeText = document.getElementById("btnChangeText");
+
+            btnChangeText.addEventListener("click", function(){
+                let txtChangeText = document.getElementById("txtChangeText").value;
+                document.getElementById("divChangeText").innerHTML = txtChangeText;
+            })
+        }
+        cor();
+        changeText();
+    </script>
+</body>
+</html>

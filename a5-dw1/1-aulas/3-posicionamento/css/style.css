@@ -1,0 +1,46 @@
+* {transition: all 0.2s;}
+
+html {
+    background-color: #666;
+    height: 100%;
+    width: 100%;
+}
+
+.centerh {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.centerabs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#login-box {
+    background-color: #333;
+    padding: 5px;
+}
+
+input[type=text], input[type=password] {
+    width: 200px;
+    height: 30px;
+    margin: 5px 10px;
+    border: hidden;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #444;
+    color: white;
+    border: hidden;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px 40px;
+}
+
+.btn:hover {
+    background-color: #222;
+    cursor: pointer;
+}

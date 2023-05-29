@@ -1,0 +1,84 @@
+1:
+Crie um site contendo 2 páginas.
+    a. Página 1 – Página Principal contendo:
+        i. Títulos
+        ii. Textos
+        iii. Imagens
+        iv. Utilize as seguintes formatações: negrito, itálico, tachado e sublinhado.
+        v. Link para a página 2
+    b. Página 2 – Página contendo:
+        i. Títulos
+        ii. Textos
+        iii. Imagem com área mapeada (Retângulo, Círculo e Polígono)
+        iv. Link para a página principal
+
+2:
+Crie um site contendo 3 páginas.
+    a. Página 1 – Página Principal contendo:
+        i. Títulos
+        ii. Textos
+        iii. Lista ordenada e não ordenada
+        iv. Links
+    b. Página 2 – Página contendo:
+        i. Títulos
+        ii. Textos
+        iii. Tabela
+    c. Página 3 – Página contendo:
+        i. Formulário com os campos:
+            1. Nome
+            2. Data de Nascimento
+            3. Sexo
+            4. Endereço (Rua, Número e Bairro)
+            5. Estado
+            6. Cidade
+            7. E-mail
+            8. Telefone
+            9. Área(s) de interesse (Computação, Engenharia, História)
+            10. Usuário
+            11. Senha
+            12. Botão
+    d. Todas as páginas deverão conter um link para voltar para a Página Principal
+
+3:
+Cite e explique as formas de usar um código CSS.
+Desenvolva um site em HTML e CSS utilizando um tema relacionado à tecnologia que contemple os seguintes critérios:
+    a. Página 1 – Página Principal contendo:
+        i. Textos
+        ii. Lista ordenada
+        iii. Links
+    b. Página 2 – Página contendo:
+        i. Textos
+        ii. Tabela
+        iii. Lista não ordenada
+    c. Página 3 – Página contendo:
+        i. Textos
+        ii. Imagens
+    d. Página 4 – Página contendo:
+        i. Formulário de contato
+    e. Todas as páginas deverão conter um link para voltar para a Página Principal.
+    f. Utilizar formatação de fontes, textos, cores e fundos nas páginas.
+    g. Utilizar as propriedades margin, padding, border e display.
+
+4:
+Escreva um programa em JavaScript que faça a soma, a subtração, a multiplicação e a divisão de dois números e retorne os resultados.
+Escreva um programa em JavaScript para calcular a área de um retângulo, de acordo com a fórmula a seguir. O usuário deverá indicar os valores. A = b . h
+Escreva um programa que leia uma quantidade de horas, minutos e segundos e imprima o total de segundos.
+Escreva um programa em JavaScript que leia quatro notas de um aluno, calcule a soma e média das notas.
+
+5:
+Escreva um programa em JavaScript que leia um número digitado pelo usuário e determine se esse número é par ou ímpar.
+Escreva um programa em JavaScript que receba um símbolo de operação do usuário (+, -, / ou *) e dois números reais. O programa deve retornar o resultado da operação recebida sobre estes dois números.
+Escreva um programa em JavaScript que leia as notas de 2 avaliações normais. Calcule a média das notas e mostre se o aluno foi Aprovado ou Reprovado. Para ser aprovado a média deverá ser maior ou igual a 6.
+Escreva um programa em JavaScript para calcular o salário mensal de um funcionário baseado no número de horas que ele trabalhou. Este funcionário recebe R$ 10,00 por hora trabalhada. Observações: O funcionário deve trabalhar até 176 horas por mês, acima disso são horas extras. As horas extras são pagas em dobro.
+Escreva um programa em JavaScript que receba 3 valores não inteiros do usuário e mostre o maior, o menor e a média.
+
+6:
+Escreva um programa em JavaScript que leia um número e calcule a soma de todos eles de 1 até ele. Ex. se o usuário entrar com 6, o programa vai mostrar 21, pois 1 + 2 + 3 + 4 + 5 + 6 = 21.
+Escreva um programa em JavaScript que leia dois valores A e B. Se A for igual B, devem ser lidos novos valores para A e B. Se A for menor que B, deve-se calcular e imprimir a subtração de B – A. Se A for maior que B, deve-se calcular e imprimir a subtração de A – B. Obs.: Considere que só serão informados valores inteiros positivos.
+Escreva um programa em JavaScript que apresente a soma dos 100 primeiros números pares.
+Escreva um programa em JavaScript que calcule a fatorial de um número qualquer.
+Escreva um programa em JavaScript que coloque na tela a tabuada de multiplicação para um número qualquer.
+
+final:
+Desenvolva um site em HTML, CSS e JavaScript utilizando o tema já definido por cada aluno ou grupo.
+Obs: Apenas um membro do grupo deverá enviar o código-fonte.

@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    position: absolute;
+    background-color: lightblue;
+    width: 100%;
+}
+
+li {list-style-type: none;}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    display: block;
+    float: left;
+    padding: 20px;
+}
+
+a:hover {background-color: aqua;}
+a:visited {color: white;}
+a:active {color: white;}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    position: relative;
+    top: 58px;
+    height: 100%;
+}
+
+section.left {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: darkblue;
+}
+
+section.right {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: azure;
+}
+
+/* sect left */
+div.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+div.welcome p {
+    color: white;
+    font-size: 2em;
+    margin: 100px 0;
+}
+/* /sect left */
+
+/* sect right */
+.grid {
+    display: grid;
+}
+
+div.form {
+    justify-content: center;
+}
+
+.formTitle {
+    width: 100%;
+    padding: 50px;
+    font-size: 1.5em;
+}
+
+.formInput {
+    width: 80%;
+    margin: 20px 10%;
+}
+
+.formInput>input {
+    height: 32px;
+    width: 100%;
+    border: 0;
+    background-color: lightgray;
+}
+
+.btn {
+    display: block;
+    margin: 20px auto;
+    border: 0;
+    border-radius: 17px;
+    padding: 10px 50px;
+}
+/* /sect right */

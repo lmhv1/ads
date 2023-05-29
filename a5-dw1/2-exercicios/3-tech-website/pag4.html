@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTubo: Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .req {color: red;}
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <h1><a href="pag1.html"><span class="tech-color-banner">tech</span><span class="tubo-color">tubo</span></a></h1>
+    </div><br>
+    <header>
+        <h1 class="title">Contato</h1>
+        <br><hr><br>
+    </header>
+    <div class="page">
+        <fieldset>
+            <form>
+                <div class="sect">
+                    <label for="nome"><b>Nome</b> <span class="req">*</span></label><br>
+                    <input type="text" id="nome" name="nome" required size="30"><br>
+                </div>
+
+                <div class="sect">
+                    <label for="email"><b>E-Mail</b> <span class="req">*</span></label><br>
+                    <input type="email" name="email" id="email" required size="30"><br>
+                </div><br>
+
+                <div class="sect">
+                    <label for="msg"><b>Contato</b></label><br>
+                    <textarea name="msg" id="msg" style="height: 200px;width: 500px"></textarea>
+                </div><br>
+
+                <div class="sect">
+                    <label>
+                        <input type="checkbox" name="promo" id="promo" value="promo" checked> Desejo receber e-mails promocionais
+                    </label><br>
+                </div><br>
+                
+                <div class="sect">
+                    <input type="submit" value="Enviar Mensagem">
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    
+    <br>
+    <footer>
+        <h1><a href="pag1.html"><span class="tech-color-footer">tech</span><span class="tubo-color">tubo</span></a></h1>
+        <hr>
+        <a href="pag1.html">Página Inicial</a><br>
+        <a href="pag4.html">Contato</a><br>
+    </footer>
+</body>
+</html>

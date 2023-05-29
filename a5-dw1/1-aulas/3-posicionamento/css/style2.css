@@ -1,0 +1,50 @@
+* {transition: all 0.2s;}
+
+html {
+    background-color: #666;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/* 
+div {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+}
+
+p {
+    margin-top: 60px;
+} */
+
+div {
+    position: absolute;
+}
+
+div.um {
+    width: 120px;
+    height: 120px;
+    background-color: aqua;
+    z-index: 1;
+}
+
+div.dois {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    z-index: 2;
+}
+
+div.tres {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    z-index: 3;
+}

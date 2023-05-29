@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #505050;color: #ffffff">
+    
+    <div><a href="form4.html"><h1>form4</h1></a></div>
+
+    <form action="">
+        <div>
+            <label for="buscar">Buscar: </label>
+            <input type="search" name="buscar" id="buscar">
+        </div>
+        <div>
+            <label for="cor">Cor: </label>
+            <input type="color" name="cor" id="cor">
+        </div>
+        <div>
+            <label for="mensagem">Mensagem: </label>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+            <label for="estado">Estado: </label>
+            <select name="estado" id="estado" required>
+                <option value="" selected>Selecionar estado</option>
+                <option value="es">Espírito Santo</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+            </select>
+        </div>
+        <div>
+            <label for="grupo">Grupo</label>
+            <select name="grupo" id="grupo">
+                <optgroup label="Grupo 1">
+                    <option value="">Item 1</option>
+                    <option value="">Item 2</option>
+                </optgroup>
+                <optgroup label="Grupo 2">
+                    <option value="">Item 3</option>
+                    <option value="">Item 4</option>
+                </optgroup>
+            </select>
+        </div>
+        <div><input type="submit" value="Enviar"></div>
+    </form>
+
+</body>
+</html>
