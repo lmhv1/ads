@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+        * {
+            font-family: monospace;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function getRequest(url) {
+            var request = new XMLHttpRequest();
+            request.open("GET", url, false);
+            request.send();
+            return request.response;
+        }
+
+        function main() {
+            var url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome";
+            var data = getRequest(url);
+            var data_json = JSON.parse(data);
+
+            data_json.forEach(element => {
+                var line = "<strong>" + element["sigla"] + " - " + element["nome"] + "</strong><br>";
+                document.write(line);
+            });
+        }
+
+        main();
+    </script>
+</body>
+</html>
